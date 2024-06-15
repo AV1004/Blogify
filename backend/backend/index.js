@@ -50,6 +50,9 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res, next) => {
+  res.send("Blogify API Welcomes you,thank you for using it!");
+});
 app.use("/feed", feedRoutes);
 app.use("/auth", authRoutes);
 
